@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>RepeaterExample.qml</file>
+        <file>BlueBox.qml</file>
+        <file>DelegateExample.qml</file>
+        <file>GreenBox.qml</file>
+        <file>SelectableListView.qml</file>
+        <file>Background.qml</file>
+        <file>YellowBox.qml</file>
+        <file>CustomDelegate.qml</file>
+    </qresource>
+</RCC>
