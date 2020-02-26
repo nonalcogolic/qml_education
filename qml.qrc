@@ -9,5 +9,7 @@
         <file>Background.qml</file>
         <file>YellowBox.qml</file>
         <file>CustomDelegate.qml</file>
+        <file>SettingsMain.qml</file>
+        <file>CustomTextEdit.qml</file>
     </qresource>
 </RCC>

@@ -2,12 +2,22 @@ import QtQuick 2.14
 import QtQuick.Window 2.14
 
 Window {
+    id: root
     visible: true
-    width: columnInside.width
-    height: columnInside.height
+   // width: settings.width
+ //   height: settings.height
 //    height: 480
     title: qsTr("Hello World")
 
+     SettingsMain {
+         id: settings
+         width: root.width
+         height: root.height
+
+     }
+
+
+ /*
     Column {
         id: columnInside
 
@@ -42,6 +52,6 @@ Window {
     }
 
     }
-
+*/
 
 }
