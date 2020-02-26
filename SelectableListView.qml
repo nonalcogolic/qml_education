@@ -64,9 +64,26 @@ Background {
             text: 'Footer'
 
             onClicked: {
+                addElements(5)
+                color = Qt.darker(color)
+            }
+
+            function addElements(number) {
                 console.log("Clicked")
-                view_component.insertElem()
-                root.listSize +=1
+                for ( var idx = 0; idx < number; ++idx )
+                {
+                   // delay(100)
+                    view_component.insertElem()
+                }
+            }
+            function delay(duration) { // In milliseconds
+                var timeStart = new Date().getTime();
+
+                while (new Date().getTime() - timeStart < duration) {
+                    // Do nothing
+                }
+
+                // Duration has passed
             }
         }
 

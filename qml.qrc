@@ -11,5 +11,8 @@
         <file>CustomDelegate.qml</file>
         <file>SettingsMain.qml</file>
         <file>CustomTextEdit.qml</file>
+        <file>AnimatedAddAndRemove.qml</file>
+        <file>ShapeShifting.qml</file>
+        <file>PathViewExample.qml</file>
     </qresource>
 </RCC>

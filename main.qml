@@ -18,7 +18,16 @@ Window {
 
 
  /*
+
+
     Column {
+        spacing: 10
+
+
+        AnimatedAddAndRemove {
+        }
+
+
         id: columnInside
 
     Row {
@@ -44,12 +53,23 @@ Window {
 
         }
 
+        ShapeShifting {
+
+        }
+        PathViewExample {
+
+        }
+
+
+
     }
     DelegateExample {
         orientation: ListView.Horizontal
         width: 480
         height: 80
     }
+
+
 
     }
 */
