@@ -3,27 +3,28 @@ import QtQuick 2.0
 Item {
     id:root
     signal clicked
-    property alias  text: text_input.text
+    property alias  text: text.text
     property alias  color: rectangle.color
+
+
+    anchors.margins: 10
 
     property color pressed_collor : "#111111"
     property color released_collor : "#222222"
 
     Rectangle {
         id : rectangle
-        width: root.width
-        height: root.height
+        anchors.fill: parent
         color:  released_collor
+        opacity: 0.5
         border.color: Qt.darker("white")
         radius: 4
     }
 
-    TextInput {
-        id: text_input
-        width: root.width
-        height: root.height
+    Text {
+        id: text
         color: "white"
-       // anchors.fill: parent
+        anchors.fill: rectangle
         anchors.margins: 4
         font.pointSize:  12
         horizontalAlignment : TextInput.AlignHCenter

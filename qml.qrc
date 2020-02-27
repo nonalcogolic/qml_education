@@ -16,5 +16,6 @@
         <file>PathViewExample.qml</file>
         <file>NumberOfPointsScroll.qml</file>
         <file>Button.qml</file>
+        <file>SearchDeviceScreen.qml</file>
     </qresource>
 </RCC>

@@ -9,7 +9,8 @@ Item {
         width: root.width
         height: root.height
         color: "black"
-        border.color: Qt.lighter(color)
+        opacity: 0.5
+        border.color: Qt.lighter("white")
     }
 
     TextInput {

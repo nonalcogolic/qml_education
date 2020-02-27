@@ -42,7 +42,7 @@ Background {
         }
 
         NumberOfPointsScroll {
-            height: 35
+            height: 42
             width: column.width
 
             anchors.left: column.left
@@ -72,6 +72,13 @@ Background {
 
         width: column.width
         height: 35
-        onClicked: console.log("Find new")
+        onClicked:  { console.log("Find new"); search_screen.visible = true }
+    }
+
+    SearchDeviceScreen {
+        id: search_screen
+        anchors.fill: root
+        z: 1
+        visible: false
     }
 }
