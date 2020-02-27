@@ -7,6 +7,7 @@ Rectangle {
     color: "#25ea70"
     border.color: Qt.lighter(color)
     property alias text: title.text
+    signal clicked
 
     Text {
         id: title
@@ -16,5 +17,11 @@ Rectangle {
         horizontalAlignment: Text.AlignHCenter
      //   text: "some text"
 
+    }
+
+    MouseArea {
+        width: root.width
+        height: root.height
+        onClicked: root.clicked()
     }
 }

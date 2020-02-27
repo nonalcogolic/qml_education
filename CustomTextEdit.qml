@@ -19,7 +19,9 @@ Item {
         color: "white"
         anchors.fill: parent
         anchors.margins: 4
+        font.pointSize:  12
         horizontalAlignment : TextInput.AlignHCenter
+        verticalAlignment: TextInput.AlignVCenter
         anchors.centerIn: back_ground
     }
 

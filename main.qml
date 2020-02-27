@@ -6,14 +6,14 @@ Window {
     visible: true
    // width: settings.width
  //   height: settings.height
-//    height: 480
+    height: 600
+    width: 280
     title: qsTr("Hello World")
 
      SettingsMain {
          id: settings
          width: root.width
          height: root.height
-
      }
 
 

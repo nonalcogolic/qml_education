@@ -14,5 +14,7 @@
         <file>AnimatedAddAndRemove.qml</file>
         <file>ShapeShifting.qml</file>
         <file>PathViewExample.qml</file>
+        <file>NumberOfPointsScroll.qml</file>
+        <file>Button.qml</file>
     </qresource>
 </RCC>
