@@ -1,7 +1,8 @@
 import QtQuick 2.14
 import QtQuick.Window 2.14
+import QtQuick.Controls 2.14
 
-Window {
+ApplicationWindow  {
     id: root
     visible: true
    // width: settings.width
@@ -10,68 +11,35 @@ Window {
     width: 280
     title: qsTr("Hello World")
 
-     SettingsMain {
-         id: settings
-         width: root.width
-         height: root.height
+
+     SwipeView {
+             id: swipeView
+             anchors.fill: parent
+             currentIndex: 1
+
+
+             SettingsMain {
+                 id: settings
+              //   width: root.width
+              //   height: root.height
+             }
+
+
+             MainMenu {
+                 id: main_menu
+              //   width: root.width
+              //   height: root.height
+             }
+
      }
 
+     PageIndicator {
+        anchors.bottom: parent.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
 
- /*
-
-
-    Column {
-        spacing: 10
-
-
-        AnimatedAddAndRemove {
-        }
-
-
-        id: columnInside
-
-    Row {
-        id:rowInside
-
-        spacing: 16
-        RepeaterExample {
-            id: repeaterinside
-
-        }
-
-        DelegateExample {
-            width: 80
-            height: 300
-
-        }
-
-        SelectableListView {
-
-        }
-
-        CustomDelegate {
-
-        }
-
-        ShapeShifting {
-
-        }
-        PathViewExample {
-
-        }
-
-
-
-    }
-    DelegateExample {
-        orientation: ListView.Horizontal
-        width: 480
-        height: 80
+        currentIndex: swipeView.currentIndex
+        count: swipeView.count
     }
 
-
-
-    }
-*/
 
 }

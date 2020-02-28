@@ -5,7 +5,13 @@ Background {
 
     property int listSize: 0
 
+    function insertItem(text){
+        view_component.insertElem(text)
+    }
+
     signal back
+    signal itemSelected(index: int)
+    signal searchAgain
 
     Button{
         id: back_button
@@ -46,11 +52,11 @@ Background {
 
         add: Transition {
                NumberAnimation { property: "opacity"; from: 0; to: 1.0; duration: 400 }
-               NumberAnimation { property: "scale"; from: 0; to: 1.0; duration: 400 }
+            //   NumberAnimation { property: "scale"; from: 0; to: 1.0; duration: 100 }
            }
 
         displaced: Transition {
-            NumberAnimation { properties: "x,y"; duration: 400; easing.type: Easing.OutBounce }
+            NumberAnimation { properties: "x,y"; duration: 200; easing.type: Easing.OutBounce }
         }
     }
 
@@ -69,39 +75,17 @@ Background {
     Component {
         id: footerComponent
 
-   /*     Rectangle {
-            id:spacing
-            opacity: 0
-            width:  ListView.view.width
-            height: 5
-        }*/
-
         Button {
-           // x: root.x
-          //  anchors.left: root.left
+
             width:  ListView.view.width
             height: 35
             text: 'Footer'
-        //    anchors.topMargin: 10
 
             onClicked: {
-                addElements(view_component.count)
-                color = Qt.darker(color)
+                root.insertItem(view_component.count) //dbg
+                root.searchAgain()
             }
 
-            function addElements(number) {
-                console.log("Clicked")
-                view_component.insertElem(number)
-            }
-            function delay(duration) { // In milliseconds
-                var timeStart = new Date().getTime();
-
-                while (new Date().getTime() - timeStart < duration) {
-                    // Do nothing
-                }
-
-                // Duration has passed
-            }
         }
 
 
@@ -133,6 +117,14 @@ Background {
                 font.pixelSize: 10
 
                 text: index
+            }
+
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    root.itemSelected(index)
+                    console.log(index)
+                }
             }
         }
     }

@@ -67,7 +67,7 @@ Background {
         text: "Find new"
         anchors.horizontalCenter: root.horizontalCenter
         anchors.bottom: root.bottom
-        anchors.bottomMargin: common_pading
+        anchors.bottomMargin: common_pading*2
 
 
         width: column.width

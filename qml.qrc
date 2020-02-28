@@ -17,5 +17,7 @@
         <file>NumberOfPointsScroll.qml</file>
         <file>Button.qml</file>
         <file>SearchDeviceScreen.qml</file>
+        <file>MainMenu.qml</file>
+        <file>TimePanel.qml</file>
     </qresource>
 </RCC>
