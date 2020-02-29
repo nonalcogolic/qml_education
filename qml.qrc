@@ -19,5 +19,6 @@
         <file>SearchDeviceScreen.qml</file>
         <file>MainMenu.qml</file>
         <file>TimePanel.qml</file>
+        <file>MainControlPan.qml</file>
     </qresource>
 </RCC>

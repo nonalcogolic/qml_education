@@ -5,6 +5,8 @@ Item {
 
     anchors.margins: 10
 
+    property alias text: text.text
+
     Rectangle {
         id: rect
      //   height: 40
@@ -20,9 +22,16 @@ Item {
     }
 
     Text {
+        id: text
         anchors.fill: rect
+
         color: "white"
-        //font: 12
+        text: "11:22:33.44"
+
+        anchors.margins: 4
+        font.pointSize:  rect.height - 10
+        horizontalAlignment : Text.AlignHCenter
+        verticalAlignment: Text.AlignVCenter
     }
 
 

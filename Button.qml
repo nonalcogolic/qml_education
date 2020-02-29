@@ -34,8 +34,8 @@ Item {
 
 
     MouseArea {
-        width: root.width
-        height: root.height
+        width: rectangle.width
+        height: rectangle.height
 
         onClicked: root.clicked()
         onPressed: rectangle.color = pressed_collor
